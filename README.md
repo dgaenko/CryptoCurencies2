@@ -6,3 +6,4 @@ Used libraries:
 - Data Binding
 - Butterknife
 - Android architecture components (Navigation, Paging, Room, ViewModel, LiveData)
+- Retrofit
