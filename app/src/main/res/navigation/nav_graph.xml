@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:app="http://schemas.android.com/apk/res-auto"
+   xmlns:android="http://schemas.android.com/apk/res/android"
+   xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/cryptoCurrenciesListFragment">
+
+    <fragment
+        android:id="@+id/currencyFragment"
+        android:name="ru.familion.cryptocurencies.ui.currency.CurrencyFragment"
+        android:label="CurrencyFragment" />
+    <fragment
+        android:id="@+id/cryptoCurrenciesListFragment"
+        android:name="ru.familion.cryptocurencies.ui.list.CryptoCurrenciesListFragment"
+        android:label="CryptoCurrenciesListFragment" >
+        <action
+            android:id="@+id/action_cryptoCurrenciesListFragment_to_currencyFragment"
+            app:destination="@id/currencyFragment" />
+    </fragment>
+</navigation>

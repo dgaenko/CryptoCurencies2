@@ -1,0 +1,117 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Cannot create GC thread. Out of system resources.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (gcTaskThread.cpp:48), pid=13548, tid=0x00000000000053c0
+#
+# JRE version:  (8.0_102-b14) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.102-b14 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000001f6b800):  JavaThread "Unknown thread" [_thread_in_vm, id=21440, stack(0x0000000002310000,0x0000000002410000)]
+
+Stack: [0x0000000002310000,0x0000000002410000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x0000000001f6b800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=21440, stack(0x0000000002310000,0x0000000002410000)]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x000000013f950000 - 0x000000013f987000 	C:\Program Files\Java\jdk1.8.0_102\bin\java.exe
+0x0000000076fe0000 - 0x0000000077189000 	C:\Windows\SYSTEM32\ntdll.dll
+0x000007fef2d70000 - 0x000007fef2da4000 	C:\Program Files\AVAST Software\Avast\x64\aswhooka.dll
+0x0000000076ec0000 - 0x0000000076fdf000 	C:\Windows\system32\kernel32.dll
+0x000007fefcdf0000 - 0x000007fefce5b000 	C:\Windows\system32\KERNELBASE.dll
+0x000007fefd680000 - 0x000007fefd75b000 	C:\Windows\system32\ADVAPI32.dll
+0x000007fefd5e0000 - 0x000007fefd67f000 	C:\Windows\system32\msvcrt.dll
+0x000007fefdc60000 - 0x000007fefdc7f000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007fefeac0000 - 0x000007fefebed000 	C:\Windows\system32\RPCRT4.dll
+0x0000000076dc0000 - 0x0000000076eba000 	C:\Windows\system32\USER32.dll
+0x000007fefebf0000 - 0x000007fefec57000 	C:\Windows\system32\GDI32.dll
+0x000007fefeab0000 - 0x000007fefeabe000 	C:\Windows\system32\LPK.dll
+0x000007fefd260000 - 0x000007fefd329000 	C:\Windows\system32\USP10.dll
+0x000007fefc670000 - 0x000007fefc864000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.17514_none_fa396087175ac9ac\COMCTL32.dll
+0x000007fefd4c0000 - 0x000007fefd531000 	C:\Windows\system32\SHLWAPI.dll
+0x000007feff2c0000 - 0x000007feff2ee000 	C:\Windows\system32\IMM32.DLL
+0x000007fefd150000 - 0x000007fefd259000 	C:\Windows\system32\MSCTF.dll
+0x0000000073500000 - 0x00000000735d1000 	C:\Program Files\Java\jdk1.8.0_102\jre\bin\msvcr100.dll
+0x000000006fe40000 - 0x00000000706da000 	C:\Program Files\Java\jdk1.8.0_102\jre\bin\server\jvm.dll
+0x000007fef89d0000 - 0x000007fef89d9000 	C:\Windows\system32\WSOCK32.dll
+0x000007fefdc10000 - 0x000007fefdc5d000 	C:\Windows\system32\WS2_32.dll
+0x000007feff2b0000 - 0x000007feff2b8000 	C:\Windows\system32\NSI.dll
+0x000007fefa530000 - 0x000007fefa56b000 	C:\Windows\system32\WINMM.dll
+0x000007fefb630000 - 0x000007fefb63c000 	C:\Windows\system32\VERSION.dll
+0x00000000771a0000 - 0x00000000771a7000 	C:\Windows\system32\PSAPI.DLL
+0x0000000073ec0000 - 0x0000000073ecf000 	C:\Program Files\Java\jdk1.8.0_102\jre\bin\verify.dll
+0x0000000073e20000 - 0x0000000073e49000 	C:\Program Files\Java\jdk1.8.0_102\jre\bin\java.dll
+0x0000000073e00000 - 0x0000000073e16000 	C:\Program Files\Java\jdk1.8.0_102\jre\bin\zip.dll
+
+VM Arguments:
+jvm_args: -Djava.awt.headless=true -Xmx64M -Dfile.encoding=windows-1251 -Duser.country=RU -Duser.language=ru -Duser.variant 
+java_command: com.google.devtools.build.android.desugar.Desugar --input G:\AndroidDemo\CryptoCurencies\app\build\intermediates\transforms\stackFramesFixer\debug\2.jar --output G:\AndroidDemo\CryptoCurencies\app\build\intermediates\transforms\desugar\debug\5.jar --input G:\AndroidDemo\CryptoCurencies\app\build\intermediates\transforms\stackFramesFixer\debug\7.jar --output G:\AndroidDemo\CryptoCurencies\app\build\intermediates\transforms\desugar\debug\10.jar --input G:\AndroidDemo\CryptoCurencies\app\build\intermediates\transforms\stackFramesFixer\debug\10.jar --output G:\AndroidDemo\CryptoCurencies\app\build\intermediates\transforms\desugar\debug\13.jar --input G:\AndroidDemo\CryptoCurencies\app\build\intermediates\transforms\stackFramesFixer\debug\1.jar --output G:\AndroidDemo\CryptoCurencies\app\build\intermediates\transforms\desugar\debug\4.jar --input G:\AndroidDemo\CryptoCurencies\app\build\intermediates\transforms\stackFramesFixer\debug\6.jar --output G:\AndroidDemo\CryptoCurencies\app\build\intermediates\transforms\desugar\debug\9.jar --input G:\AndroidDemo\CryptoCurencies\app\build\intermediates\transforms\stackFramesFixer\debug\50.jar --output G:\AndroidDemo\CryptoCurencies\app\build\intermediates\transforms\desugar\debug\53.jar --input G:\AndroidDemo\CryptoCurencies\app\build\intermediates\transforms\stackFramesFixer\debug\17.jar --output G:\AndroidDemo\CryptoCurencies\app\build\intermediates\transforms\desugar\debug\20.jar --input G:\AndroidDemo\CryptoCurencies\app\build\intermediates\transforms\stackFramesFixer\debug\47.jar --output G:\AndroidDemo\CryptoCurencies\app\build\intermediates\transforms\desugar\debug\50.jar --input G:\AndroidDemo\CryptoCurencies\app\build\intermediates\transforms\stackFramesFixer\debug\49.jar --output G:\AndroidDemo\CryptoCurencies\app\build\intermediates\transforms\desugar\debug\52.jar --classpath_entry G:\AndroidDemo\CryptoCurencies\app\build\intermediates\classes\debug --classpath_entry G:\AndroidDemo\CryptoCurencies\app\b
+java_class_path (initial): C:\Users\demon\AppData\Local\Temp\desugar_deploy.jar835970640445423137
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.8.0_102\
+PATH=C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Files\cpp\bin\Intel64;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Common Files\Adobe\AGL;C:\Program Files (x86)\Intel\OpenCL SDK\3.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\3.0\bin\x64;C:\Program Files (x86)\MySQL\MySQL Utilities 1.3.6\;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Program Files (x86)\QuickTime\QTSystem\;D:\Program Files\nodejs\;g:\Program Files\Git\cmd;D:\Program Files\Apache Software Foundation\php7;C:\ProgramData\ComposerSetup\bin;I:\cocos2d-x-3.10\templates;I:\cocos2d-x-3.10\tools\cocos2d-console\bin;;C:\Windows\;C:\Python27\;C:\Program Files\Java\jdk1.8.0_102\jre\bin\;C:\android\sdk\platform-tools\;d:\Program Files (x86)\Microsoft VS Code\bin;C:\Users\demon\AppData\Roaming\npm;C:\Users\demon\AppData\Roaming\Composer\vendor\bin
+USERNAME=demon
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 60 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 (6.1.7601.18015)
+
+CPU:total 8 (4 cores per cpu, 2 threads per core) family 6 model 60 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, rtm, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2
+
+Memory: 4k page, physical 7281636k(166204k free), swap 29124680k(96580k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.102-b14) for windows-amd64 JRE (1.8.0_102-b14), built on Jun 22 2016 13:15:21 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Mon Aug 27 11:15:40 2018
+elapsed time: 0 seconds (0d 0h 0m 0s)
+

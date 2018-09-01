@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">CryptoCurencies</string>
+
+    <!-- Fragments UI elements texts -->
+    <string name="currency_symbol">Symbol:</string>
+    <string name="currency_price">Price:</string>
+    <string name="currency_change">Change</string>
+    <string name="currency_1h">1h:</string>
+    <string name="currency_24p">24h:</string>
+    <string name="currency_7d">7d:</string>
+    <string name="currency_last_updated">Last updated:</string>
+
+    <string name="network_error">Error: %s (code:%d)</string>
+
+    <string name="network_error_retry">RETRY</string>
+
+    <string name="format_currency_price">%.2f $</string>
+    <string name="format_currency_percent_changes">%.2f %%</string>
+    <string name="format_currency_last_updated">dd.MM.yyyy</string>
+    <string name="format_currency_num">%d</string>
+
+</resources>

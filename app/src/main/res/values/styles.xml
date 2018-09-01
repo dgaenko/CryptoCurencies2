@@ -1,0 +1,46 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Toolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:background">?attr/colorPrimary</item>
+    </style>
+
+    <style name="TitleTextStyle">
+        <item name="android:textSize">@dimen/title_text_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:color">@android:color/black</item>
+    </style>
+
+    <style name="SymbolTextStyle">
+        <item name="android:textSize">@dimen/currency_row_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="DaysTextStyle">
+        <item name="android:textSize">@dimen/currency_row_text_size</item>
+    </style>
+
+    <style name="DaysMinusTextStyle" parent="DaysTextStyle">
+        <item name="android:textStyle">bold</item>
+        <item name="android:color">@android:color/holo_red_light</item>
+    </style>
+
+    <style name="CurrencyInfoTitleStyle">
+        <item name="android:textSize">@dimen/currency_info_title_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CurrencyInfoTextStyle">
+        <item name="android:textSize">@dimen/currency_info_text_size</item>
+    </style>
+
+</resources>

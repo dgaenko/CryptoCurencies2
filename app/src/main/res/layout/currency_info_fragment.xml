@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable name="currency" type="ru.familion.cryptocurencies.model.Data" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txtCurrencyTitle"
+            style="@style/CurrencyInfoTitleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@{currency.name}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgCurrencyIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtCurrencyTitle"
+            app:srcCompat="@drawable/btc" />
+
+        <TableLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:padding="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtCurrencyTitle">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/textView1"
+                    style="@style/CurrencyInfoTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/currency_symbol"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtCurrencyTitle" />
+
+                <TextView
+                    android:id="@+id/txtCurrencyInfoSymbol"
+                    style="@style/CurrencyInfoTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="@{currency.symbol}"
+                    app:layout_constraintStart_toEndOf="@+id/textView1"
+                    app:layout_constraintTop_toTopOf="@+id/textView1" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    style="@style/CurrencyInfoTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/currency_price"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtCurrencyTitle" />
+
+                <TextView
+                    android:id="@+id/txtCurrencyInfoPrice"
+                    style="@style/CurrencyInfoTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="@{@string/format_currency_price(currency.quotes.USD.price)}"
+                    app:layout_constraintStart_toEndOf="@+id/textView1"
+                    app:layout_constraintTop_toTopOf="@+id/textView1" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    style="@style/CurrencyInfoTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/currency_change"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtCurrencyTitle" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    style="@style/CurrencyInfoTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/currency_1h"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtCurrencyTitle" />
+
+                <TextView
+                    android:id="@+id/txtCurrencyInfo1h"
+                    style="@style/CurrencyInfoTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="@{@string/format_currency_percent_changes(currency.quotes.USD.percent_change_1h)}"
+                    app:layout_constraintStart_toEndOf="@+id/textView1"
+                    app:layout_constraintTop_toTopOf="@+id/textView1" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    style="@style/CurrencyInfoTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/currency_24p"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtCurrencyTitle" />
+
+                <TextView
+                    android:id="@+id/txtCurrencyInfo24h"
+                    style="@style/CurrencyInfoTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="@{@string/format_currency_percent_changes(currency.quotes.USD.percent_change_24h)}"
+                    app:layout_constraintStart_toEndOf="@+id/textView1"
+                    app:layout_constraintTop_toTopOf="@+id/textView1" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView6"
+                    style="@style/CurrencyInfoTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/currency_7d"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtCurrencyTitle" />
+
+                <TextView
+                    android:id="@+id/txtCurrencyInfo7d"
+                    style="@style/CurrencyInfoTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="@{@string/format_currency_percent_changes(currency.quotes.USD.percent_change_7d)}"
+                    app:layout_constraintStart_toEndOf="@+id/textView1"
+                    app:layout_constraintTop_toTopOf="@+id/textView1" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/textView7"
+                    style="@style/CurrencyInfoTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/currency_last_updated"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtCurrencyTitle" />
+
+                <TextView
+                    android:id="@+id/txtCurrencyInfoLastUpdated"
+                    style="@style/CurrencyInfoTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="1 $"
+                    app:layout_constraintStart_toEndOf="@+id/textView1"
+                    app:layout_constraintTop_toTopOf="@+id/textView1" />
+            </TableRow>
+
+        </TableLayout>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>
