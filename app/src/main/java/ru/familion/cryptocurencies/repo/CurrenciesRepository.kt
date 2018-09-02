@@ -1,17 +1,13 @@
 package ru.familion.cryptocurencies.repo
 
-import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.MediatorLiveData
-import android.arch.lifecycle.MutableLiveData
 import android.arch.paging.PagedList
 import ru.familion.cryptocurencies.api.CoinmarketcapApi
 import javax.inject.Inject
 
 import ru.familion.cryptocurencies.model.Data
-import android.util.Log
 import ru.familion.cryptocurencies.repo.db.CurrencyDatabase
 import ru.familion.cryptocurencies.repo.db.RepoDatabase
-import ru.familion.cryptocurencies.repo.net.NetworkState
 import ru.familion.cryptocurencies.repo.net.RepoNetwork
 import ru.familion.cryptocurencies.repo.net.paging.NetCurrenciesDataSourceFactory
 import rx.schedulers.Schedulers
@@ -43,7 +39,7 @@ class CurrenciesRepository @Inject constructor(
         repoDatabase = RepoDatabase(currencyDatabase)
         liveDataMerger = MediatorLiveData()
 
-        liveDataMerger.addSource(repoNetwork.getPagedCurrencies()) { value ->
+        liveDataMerger.addSource(repoNetwork.getCurrencies()) { value ->
             liveDataMerger.setValue(value)
         }
         dataSourceFactory.getCurrencies()
