@@ -19,4 +19,6 @@
     <string name="format_currency_last_updated">dd.MM.yyyy</string>
     <string name="format_currency_num">%d</string>
 
+    <string name="icon_test">act</string>
+
 </resources>

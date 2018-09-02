@@ -5,14 +5,21 @@ import android.graphics.drawable.Drawable
 import android.util.TypedValue
 
 import ru.familion.cryptocurencies.R
+import java.text.SimpleDateFormat
+import java.util.*
 
 
 class Utility(val context: Context) {
 
     fun getItemDrawable(resourceName: String): Drawable {
+        var resId = getDrawableResId(resourceName)
+        return context.resources.getDrawable(resId)
+    }
+
+    fun getDrawableResId(resourceName: String): Int {
         var resId = context.resources.getIdentifier(resourceName.toLowerCase(), "drawable", context.packageName)
         resId = if (resId != 0) resId else R.drawable.fail
-        return context.resources.getDrawable(resId)
+        return resId
     }
 
     fun getValueColor(value: Double): Int {
@@ -27,6 +34,11 @@ class Utility(val context: Context) {
             res = typedvalueattr.resourceId
         }
         return res
+    }
+
+    fun timestampToString(timestamp: Int): String {
+        val dateFormat = SimpleDateFormat(context.getString(R.string.format_currency_last_updated))
+        return dateFormat.format(Date(timestamp * 1000L))
     }
 
 }
