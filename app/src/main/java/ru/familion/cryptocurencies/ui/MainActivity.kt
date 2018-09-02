@@ -28,7 +28,6 @@ import ru.familion.cryptocurencies.vm.CurrencyDetailsViewModel
 class MainActivity @Inject constructor(): AppCompatActivity(), HasSupportFragmentInjector, View.OnClickListener {
 
     lateinit var navController: NavController
-    lateinit var listViewModel: CurrenciesListViewModel
     lateinit var detailsViewModel: CurrencyDetailsViewModel
 
     @BindView(R.id.toolbar)
@@ -50,7 +49,6 @@ class MainActivity @Inject constructor(): AppCompatActivity(), HasSupportFragmen
 
         navController = findNavController(this, R.id.nav_host_fragment)
 
-        listViewModel = ViewModelProviders.of(this, viewModelFactory).get(CurrenciesListViewModel::class.java)
         detailsViewModel = ViewModelProviders.of(this, viewModelFactory).get(CurrencyDetailsViewModel::class.java)
 
         observersRegisters()

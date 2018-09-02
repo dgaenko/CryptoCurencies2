@@ -25,9 +25,6 @@ import ru.familion.cryptocurencies.vm.CurrencyDetailsViewModel
 
 class CryptoCurrenciesListFragment: Fragment(), ItemClickListener, Injectable {
 
-    //@BindView(R.id.currenciesReciclerView)
-    //lateinit var recicleView: RecyclerView
-
     lateinit var adapter: CurrenciesListPagedAdapter
 
     @Inject lateinit var viewModelFactory: ViewModelProvider.Factory
@@ -38,7 +35,6 @@ class CryptoCurrenciesListFragment: Fragment(), ItemClickListener, Injectable {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.currencies_list_fragment, container, false)
 
-        //ButterKnife.bind(this, view)
         val recicleView = view.findViewById<RecyclerView>(R.id.currenciesReciclerView)
 
         listViewModel = ViewModelProviders.of(this, viewModelFactory).get(CurrenciesListViewModel::class.java)
